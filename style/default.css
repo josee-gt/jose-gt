@@ -1,0 +1,28 @@
+:root {
+	--bg-page-one: #eea3c4;
+	--bg-page-two: #ffd169;
+	--bg-nav: #262626;
+	--bg-card: #fdf7e1;
+	--text-primary: #fcffff;
+	--text-secondary: #1a0600;
+	--text-tertiary: #1f1904;
+	--color-btn-primary: #f78303;
+	--border-color-btn: #804136;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "Rubik", sans-serif;
+	/*
+    400
+    500
+    600
+    700
+    */
+}

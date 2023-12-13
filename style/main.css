@@ -12,6 +12,9 @@ header {
 	grid-template-areas: "name nav";
 	padding: 0 16px 0 16px;
 }
+header .open {
+	display: none;
+}
 
 header p {
 	grid-area: name;
@@ -24,6 +27,10 @@ header p {
 header nav {
 	grid-area: nav;
 	width: 100%;
+}
+
+header nav .close {
+	display: none;
 }
 header nav ul {
 	display: flex;
@@ -242,3 +249,44 @@ header ul li a {
 	font-weight: 400;
 	text-decoration: none;
 }
+/*Mobile <= 480px & <= 768px */
+@media screen and (max-width: 580px) {
+	header .nav .close,
+	header .open {
+		display: block;
+	}
+
+	.nav {
+		opacity: 0;
+		visibility: hidden;
+
+		z-index: 2;
+		position: absolute;
+		width: 160px;
+		top: 4px;
+		bottom: 0;
+		right: 4px;
+		background-color: var(--bg-nav);
+		box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+		padding: 32px;
+	}
+
+	.nav.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+	header nav ul {
+		width: 100%;
+		height: 100%;
+		flex-direction: column;
+		align-items: end;
+		justify-content: space-evenly;
+		list-style: none;
+	}
+}
+
+/*Tablet  <= 834px & <= 1024px */
+
+/*Laptop <=1600px*/
+
+/*Desktop >=1060px*/

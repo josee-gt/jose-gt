@@ -24,7 +24,13 @@
 	<body>
 		<header>
 			<p>José GT</p>
-			<nav>
+			<button id="open-menu" class="open">
+				<span class="material-symbols-outlined"> menu </span>
+			</button>
+			<nav id="nav" class="nav visible">
+				<button id="close-menu" class="close">
+					<span class="material-symbols-outlined"> close </span>
+				</button>
 				<ul>
 					<li><a href="#">About me</a></li>
 					<li><a href="#">Projects</a></li>
@@ -52,7 +58,7 @@
 			</section>
 
 			<section class="project">
-				<img class="division" src="/assets/Vector.svg" alt="" />
+				<!-- <img class="division" src="/assets/Vector.svg" alt="" /> -->
 				<h2>Projects</h2>
 				<div class="project__grid">
 					<article class="project__card">
@@ -161,5 +167,19 @@
 			</section>
 		</main>
 		<footer></footer>
+		<script>
+			const nav = document.querySelector("#nav");
+			const open = document.querySelector("#open-menu");
+			const close = document.querySelector("#close-menu");
+
+			open.addEventListener("click", () => {
+				nav.classList.add("visible");
+			});
+
+			close.addEventListener("click", () => {
+				nav.classList.remove("visible");
+				// console.log(print("5"));
+			});
+		</script>
 	</body>
 </html>
